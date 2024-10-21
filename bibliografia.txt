@@ -1,0 +1,3 @@
+git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
