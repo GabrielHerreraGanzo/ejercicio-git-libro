@@ -331,7 +331,34 @@ bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git branch bibliogr
   remotes/origin/main 5b53ad8 Paso 5 finalizado
  ```
 
- 
+## Paso 7
+
+Creo el fichero capitulos/capitulo4.txt y añado el texto siguiente: "  En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.". Además, añado los cambios a la zona de intercambio temporal, hago un commit con el mensaje “Añadido capítulo 4.” y muestro la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ cat > capitulos/capitulo4.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git add .
+git commit -m "Añadido capítulo 4."
+[main c571b54] Añadido capítulo 4.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo4.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git log --graph --all --oneline
+* c571b54 (HEAD -> main) Añadido capítulo 4.
+* 43ee678 (origin/main, origin/HEAD) Paso 6 finalizado
+* 5b53ad8 (bibliografia) Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
 
 
 
