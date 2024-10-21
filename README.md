@@ -318,8 +318,146 @@ bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git add .
 bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git annotate indice.txt
 3819ef13        (GabrielHerreraGanzo    2024-10-21 17:03:22 +0100       1)Indice de los cápitulos, con conceptos avanzados de git
 ```
-    
+## Paso 6
+
+Creo una nueva rama bibliografía y muestro las ramas del repositorio.
  
+ ```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git branch bibliografia
+  git branch -av
+  bibliografia        5b53ad8 Paso 5 finalizado
+* main                5b53ad8 Paso 5 finalizado
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main 5b53ad8 Paso 5 finalizado
+ ```
+
+## Paso 7
+
+Creo el fichero capitulos/capitulo4.txt y añado el texto siguiente: "  En este capítulo veremos cómo usar GitHub para alojar repositorios en remoto.". Además, añado los cambios a la zona de intercambio temporal, hago un commit con el mensaje “Añadido capítulo 4.” y muestro la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ cat > capitulos/capitulo4.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git add .
+git commit -m "Añadido capítulo 4."
+[main c571b54] Añadido capítulo 4.
+ 1 file changed, 1 insertion(+)
+ create mode 100644 capitulos/capitulo4.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git log --graph --all --oneline
+* c571b54 (HEAD -> main) Añadido capítulo 4.
+* 43ee678 (origin/main, origin/HEAD) Paso 6 finalizado
+* 5b53ad8 (bibliografia) Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
+## Paso 8
+
+Cambio a la rama bibliografía y creo el fichero bibliografia.txt y añado la siguiente referencia: "Chacon, S. and Straub, B. Pro Git. Apress." 
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git checkout bibliografia
+ cat > bibliografia.txt
+ - Chacon, S. and Straub, B. Pro Git. Apress.
+Cambiado a rama 'bibliografia'
+```
+
+Añado los cambios a la zona de intercambio temporal, hago un commit con el mensaje “Añadida primera referencia bibliográfica." y muestro la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
+[bibliografia 98db11e] Añadida primera referencia bibliográfica.
+ 1 file changed, 3 insertions(+)
+ create mode 100644 bibliografia.txt
+* 98db11e (HEAD -> bibliografia) Añadida primera referencia bibliográfica.
+| * adaed50 (origin/main, origin/HEAD, main) Paso 7 finalizado
+| * c571b54 Añadido capítulo 4.
+| * 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
+## Paso 9
+
+Fusiono la rama bibliografía con la rama main, muestro la historia del repositorio incluyendo todas las ramas, elimino la rama bibliografía y muestro de nuevo la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git checkout main
+A	bibliografia.txt
+Ya en 'main'
+Tu rama está actualizada con 'origin/main'.
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git merge bibliografia
+Los cambios locales a los archivos siguientes serían sobreescritos al fusionar:
+
+  bibliografia.txtbae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git log --graph --all --oneline
+* d206250 (origin/bibliografia, bibliografia) Añadida primera referencia bibliográfica.
+* 98db11e Añadida primera referencia bibliográfica.
+| * 26f2ad9 (HEAD -> main, origin/main, origin/HEAD) Paso 8 finalizado
+| * adaed50 Paso 7 finalizado
+| * c571b54 Añadido capítulo 4.
+| * 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git branch -d bibliografia
+warning: borrando la rama 'bibliografia' que ha sido fusionada en
+         'refs/remotes/origin/bibliografia', pero aún no ha sido fusionada a HEAD.
+Eliminada la rama bibliografia (era d206250).
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-g
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git log --graph --all --oneline
+* d206250 (origin/bibliografia) Añadida primera referencia bibliográfica.
+* 98db11e Añadida primera referencia bibliográfica.
+| * 26f2ad9 (HEAD -> main, origin/main, origin/HEAD) Paso 8 finalizado
+| * adaed50 Paso 7 finalizado
+| * c571b54 Añadido capítulo 4.
+| * 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
+## Paso 10
+
+    
+
 
 
 
