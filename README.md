@@ -359,6 +359,48 @@ bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git log --graph --a
 * 3238bae Initial commit
 ```
 
+## Paso 8
+
+Cambio a la rama bibliografía y creo el fichero bibliografia.txt y añado la siguiente referencia: "Chacon, S. and Straub, B. Pro Git. Apress." 
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git checkout bibliografia
+ cat > bibliografia.txt
+ - Chacon, S. and Straub, B. Pro Git. Apress.
+Cambiado a rama 'bibliografia'
+```
+
+Añado los cambios a la zona de intercambio temporal, hago un commit con el mensaje “Añadida primera referencia bibliográfica." y muestro la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git add .
+git commit -m "Añadida primera referencia bibliográfica."
+git log --graph --all --oneline
+[bibliografia 98db11e] Añadida primera referencia bibliográfica.
+ 1 file changed, 3 insertions(+)
+ create mode 100644 bibliografia.txt
+* 98db11e (HEAD -> bibliografia) Añadida primera referencia bibliográfica.
+| * adaed50 (origin/main, origin/HEAD, main) Paso 7 finalizado
+| * c571b54 Añadido capítulo 4.
+| * 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
+## Paso 9
+
+
+    
+
 
 
 
