@@ -297,5 +297,31 @@ index 9a06b52..bbab8eb 100644
 
 ## Paso 5
 
+Creo el fichero índice.txt donde se imprimirá la siguiente línea: "Indice de los cápitulos, con conceptos avanzados de git". Después, añado los cambios a la zona de intercambio temporal, hago un commit de los cambios con el mensaje "Indice de los cápitulos, con conceptos avanzados de git y muestro quién ha hecho cambios sobre el fichero indice.txt.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  cat > indice.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git add .
+ git commit -m "Se crea el indice."
+[main 29d2222] Se crea el indice.
+ 2 files changed, 2 insertions(+)
+ create mode 100644 indice.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ echo "Indice de los cápitulos, con conceptos avanzados de git" >> indice.txt
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git add .
+ git commit -m "Añadido el índice ."
+[main 3819ef1] Añadido el índice .
+ 1 file changed, 1 insertion(+)
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git annotate indice.txt
+3819ef13        (GabrielHerreraGanzo    2024-10-21 17:03:22 +0100       1)Indice de los cápitulos, con conceptos avanzados de git
+```
+    
+ 
+
+
+
 
 
