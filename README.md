@@ -398,6 +398,66 @@ git log --graph --all --oneline
 
 ## Paso 9
 
+<<<<<<< HEAD
+=======
+Fusiono la rama bibliografía con la rama main, muestro la historia del repositorio incluyendo todas las ramas, elimino la rama bibliografía y muestro de nuevo la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git checkout main
+A	bibliografia.txt
+Ya en 'main'
+Tu rama está actualizada con 'origin/main'.
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git merge bibliografia
+Los cambios locales a los archivos siguientes serían sobreescritos al fusionar:
+
+  bibliografia.txtbae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git log --graph --all --oneline
+* d206250 (origin/bibliografia, bibliografia) Añadida primera referencia bibliográfica.
+* 98db11e Añadida primera referencia bibliográfica.
+| * 26f2ad9 (HEAD -> main, origin/main, origin/HEAD) Paso 8 finalizado
+| * adaed50 Paso 7 finalizado
+| * c571b54 Añadido capítulo 4.
+| * 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git branch -d bibliografia
+warning: borrando la rama 'bibliografia' que ha sido fusionada en
+         'refs/remotes/origin/bibliografia', pero aún no ha sido fusionada a HEAD.
+Eliminada la rama bibliografia (era d206250).
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-g
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git log --graph --all --oneline
+* d206250 (origin/bibliografia) Añadida primera referencia bibliográfica.
+* 98db11e Añadida primera referencia bibliográfica.
+| * 26f2ad9 (HEAD -> main, origin/main, origin/HEAD) Paso 8 finalizado
+| * adaed50 Paso 7 finalizado
+| * c571b54 Añadido capítulo 4.
+| * 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
+## Paso 10
+>>>>>>> bibliografia
 
     
 
