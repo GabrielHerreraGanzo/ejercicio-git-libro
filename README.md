@@ -318,7 +318,19 @@ bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git add .
 bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git annotate indice.txt
 3819ef13        (GabrielHerreraGanzo    2024-10-21 17:03:22 +0100       1)Indice de los cápitulos, con conceptos avanzados de git
 ```
-    
+## Paso 6
+
+Creo una nueva rama bibliografía y muestro las ramas del repositorio.
+ 
+ ```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git branch bibliografia
+  git branch -av
+  bibliografia        5b53ad8 Paso 5 finalizado
+* main                5b53ad8 Paso 5 finalizado
+  remotes/origin/HEAD -> origin/main
+  remotes/origin/main 5b53ad8 Paso 5 finalizado
+ ```
+
  
 
 
