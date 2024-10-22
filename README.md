@@ -500,6 +500,52 @@ Tu rama está actualizada con 'origin/main'.
 ```
 
 
+Añado los cambios a la zona de intercambio temporal y hacer un commit con el mensaje “Resuelto conflicto de bibliografía. Muestro la historia del repositorio incluyendo todas las ramas.
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git commit -a -m "Añadida nueva referencia bibliográfica."
+ git merge bibliografia
+ git nano bibliografia
+[main cff109b] Añadida nueva referencia bibliográfica.
+ 1 file changed, 40 insertions(+), 1 deletion(-)
+Ya está actualizado.
+git: 'nano' no es un comando de git. Mira 'git --help'.
+
+Los comandos más similares son
+	annotate
+	daemon
+
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git commit -a -m "Solucionado conflicto bibliografía."
+ git log --graph --all --oneline
+En la rama main
+Tu rama está adelantada a 'origin/main' por 1 commit.
+  (usa "git push" para publicar tus commits locales)
+
+nada para hacer commit, el árbol de trabajo está limpio
+* cff109b (HEAD -> main) Añadida nueva referencia bibliográfica.
+*   78f5dc2 (origin/main, origin/HEAD) README finalizado
+|\  
+| * aef2cf0 (origin/bibliografia, bibliografia) Readme finalizado
+| * d206250 Añadida primera referencia bibliográfica.
+| * 98db11e Añadida primera referencia bibliográfica.
+* | e659465 Paso 9 finalizado
+* | 26f2ad9 Paso 8 finalizado
+* | adaed50 Paso 7 finalizado
+* | c571b54 Añadido capítulo 4.
+* | 43ee678 Paso 6 finalizado
+|/  
+* 5b53ad8 Paso 5 finalizado
+* 3819ef1 Añadido el índice .
+* 29d2222 Se crea el indice.
+* fae9167 Paso 4 finalizado
+* f37f215 Añadido capítulo 3.
+* e4cd974 Añadido capítulo 2.
+* 382f37a Añadido capítulo 1.
+* 8b0899f Añadido capítulo 1.
+* ead363a Creación y clonación del repositorio
+* 3238bae Initial commit
+```
+
 
 
 
