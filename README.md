@@ -459,7 +459,46 @@ bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$  git log --graph --
 ## Paso 10
 >>>>>>> bibliografia
 
-    
+
+Cambiar a la rama bibliografía.
+
+Cambiar el fichero bibliografia.txt para que contenga las siguientes referencias: 
+
+"Scott Chacon and Ben Straub. Pro Git. Apress."
+
+"Ryan Hodson. Ry’s Git Tutorial. Smashwords (2014)"
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git checkout bibliografia
+cat > bibliografia.txt
+- Scott Chacon and Ben Straub. Pro Git. Apress.
+- Ryan Hodson. Ry's Git Tutorial. Smashwords (2014)
+Cambiado a rama 'bibliografia'
+Tu rama está actualizada con 'origin/bibliografia'.
+```
+
+Cambiar a la rama main.
+
+Cambiar el fichero bibliografia.txt para que - contenga las siguientes referencias:
+
+"Chacon, S. and Straub, B. Pro Git. Apress."
+
+"Loeliger, J. and McCullough, M. Version control with Git. O’Reilly."
+
+```code
+bae2@jpexposito-VirtualBox:~/Documentos/ejercicio-git-libro$ git commit -a -m "Añadida nueva referencia bibliográfica."
+git checkout main
+cat > bibliografia.txt
+- Chacon, S. and Straub, B. Pro Git. Apress.
+- Loeliger, J. and McCullough, M. Version control with Git. O'Reilly.
+En la rama bibliografia
+Tu rama está actualizada con 'origin/bibliografia'.
+
+nada para hacer commit, el árbol de trabajo está limpio
+Cambiado a rama 'main'
+Tu rama está actualizada con 'origin/main'.
+```
+
 
 
 
